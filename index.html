@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <title>P2P Encrypted Chat</title>
+  </head>
+  <body>
+    <h1>End mass survailance</h1>
+    <div>
+      <h2>Local Description</h2>
+      <pre id="localDescription"></pre>
+    </div>
+    <div>
+      <h2>Remote Description</h2>
+      <textarea
+        id="remoteDescription"
+        placeholder="Paste remote SDP here"
+      ></textarea>
+      <button onclick="setRemoteDescription()">Set Remote Description</button>
+    </div>
+    <div>
+      <h2>Local ICE Candidates</h2>
+      <pre id="localIceCandidates"></pre>
+    </div>
+    <div>
+      <h2>Add Remote ICE Candidate</h2>
+      <input
+        type="text"
+        id="iceCandidateInput"
+        placeholder="Paste ICE candidate JSON here"
+      />
+      <button onclick="addIceCandidate()">Add ICE Candidate</button>
+    </div>
+    <div>
+      <h2>Messages</h2>
+      <input type="text" id="messageInput" placeholder="Type your message" />
+      <button onclick="sendMessage()">Send</button>
+      <div id="receivedMessages"></div>
+    </div>
+    <div id="status"></div>
+    <button onclick="createOffer()">Create Offer</button>
+    <button onclick="createAnswer()">Create Answer</button>
+    <script src="./main.js"></script>
+  </body>
+</html>
