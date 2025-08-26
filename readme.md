@@ -1,5 +1,6 @@
 This program ensures your conversations are private, accessible only to you and your contact. No server stores your messages, protecting you from mass surveillance
 
+#### Connection Architecture
 ```
 peer A           STUN server           peer B
   |                    |                    |
@@ -25,7 +26,7 @@ peer A           STUN server           peer B
   |----data channel established-------------|
 ```
 
-Deploy
+#### Deploy
 - Domain and SSL: Purchase domain, use [Let's Encrypt](https://letsencrypt.org/) for free SSL certificate to enable HTTPS.
 - Frontend : Host static HTML/JS/CSS on Vercel or AWS S3 for global access.
 - Signaling Server: Implement WebSocket based signaling (e.g., Node.js + Socket.io) for automated SDP/ICE exchange, deploy to Render, or AWS EC2.
